@@ -3,31 +3,35 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 #body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: linear-gradient(rgba(103, 67, 168, 0.842), rgba(0, 0, 0, 0.842));
-  width: 100vw;
-  /* height: 100vh; */
+  background: url(./imagens/7.jpg)no-repeat center/cover;
+  min-height: 100vh;
 }
 
 header {
+  display: flex;
   width: 80%;
   height: 80px;
-  margin-top: 10px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 h1 {
+  color: rgb(39, 2, 73);
   font-size: 24pt;
   font-family: 'Comfortaa', cursive;
   margin-top: 5px;
-  text-shadow: rgb(63, 35, 114) 1px 1px 1px;
+  text-shadow: rgb(179, 156, 221) 1px 2px 2px;
 }
 
 #content {
-  /* margin-top: 10px; */
+  width: 95%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 950px;
 }
 
 a {
@@ -35,11 +39,16 @@ a {
 }
 
 .div {
-  width: 90%;
+  width: 95%;
+  max-width: 450px;
   background-image: linear-gradient(rgba(44, 30, 82, 0.842), rgba(93, 89, 131, 0.842));
   border-radius: 1em;
   margin: 25px auto 25px auto;
-  max-width: 500px;
+  box-shadow: 0 0 10px 1px rgba(176, 138, 192, 0.548);
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px 0 10px 0;
 }
 
 h3 {
@@ -54,12 +63,24 @@ h3 {
 p {
   color: rgb(158, 129, 207);
   text-shadow: 0 0 10px rgb(0, 0, 0);
-  padding: 25px 0 10px 0;
+  margin-top: 15px;
+  padding: 20px 0 10px 0;
   font-size: 13pt;
 }
 
-@media (min-width:360px) {
-  #body {
-    height: 100vh;
-  }
+footer {
+  text-align: center;
+  padding: 5px;
 }
+
+#footer {
+  color: rgb(255, 255, 255);
+  font-size: 8pt;
+  font-family: 'Comfortaa', cursive;
+}
+
+/* @media (min-width:1000px) {
+  #content {
+    flex-direction: row;
+  }
+} */
