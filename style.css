@@ -3,7 +3,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 #body {
-  background: url(./imagens/fundo.jpg)no-repeat center/cover;
+  background: url(./imagens/fundo-min.jpg)no-repeat center/cover;
   min-height: 100vh;
 }
 
