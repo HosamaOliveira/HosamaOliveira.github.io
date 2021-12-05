@@ -51,14 +51,6 @@ a {
   padding: 10px 0 10px 0;
 }
 
-.swing:hover
-{
-        -webkit-animation: swing 1s ease-in-out;
-        animation: swing 1s ease-in-out;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-}
-
 h3 {
   width: 80%;
   color: rgb(158, 129, 207);
@@ -85,79 +77,4 @@ footer {
   color: rgb(255, 255, 255);
   font-size: 8pt;
   font-family: 'Comfortaa', cursive;
-}
-
-
-@-webkit-keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-       transform: translateX(-5px);
-       
-    } 
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-@keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-        color: lightblue;
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-
-    }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
- 
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-
-    }
 }
