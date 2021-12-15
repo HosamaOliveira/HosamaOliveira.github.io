@@ -5,16 +5,18 @@
 #body {
   background: url(./imagens/fundo-min.jpg)no-repeat center/cover;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
 
 header {
-  display: flex;
+  /* display: flex; */
   width: 80%;
   height: 80px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   margin: auto;
+  margin-top: 20px;
 }
 
 h1 {

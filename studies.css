@@ -3,12 +3,12 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --defaultLetterColor: rgb(164, 149, 204); 
+  --defaultLetterColor: rgb(90, 6, 107); 
   --textShadow: 0px 1px 1px black; 
 }
 
 body {
-  background-color: rgb(44, 34, 61);
+  background-color: rgb(235, 187, 193);
   font-family: 'Comfortaa', cursive;
   -webkit-tap-highlight-color: transparent;
 }
@@ -17,36 +17,31 @@ main {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 90%;
+  width: 100%;
   height: 100vh;
   align-items: center;
-  /* background-color: aliceblue; */
 }
 
 h1 {
-  font-size: 24pt;
+  font-size: 28pt;
   color: var(--defaultLetterColor);
   text-shadow: var(--textShadow);
   margin-top: 15px;
   padding: 5px;
-  /* background-color: blanchedalmond; */
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
 .link {
-  background-color: rgb(92, 62, 139);
-  width: 98%;
+  background-color: rgb(212, 154, 159);
+  width: 100%;
   padding: 5px;
-  min-height: 250px;
-  max-width: 430px;
-  border-radius: 1em;
+  place-items: center;
   margin-top: 40px;
   text-align: center;
   box-shadow: 0px 0px 5px .2px rgb(49, 7, 59);
@@ -76,12 +71,15 @@ p {
 h3 {
   padding: 5px;
   color: var(--defaultLetterColor);
-  text-shadow: var(--textShadow);
   font-size: 10pt;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 cite {
+  text-align: center;
   font-size: 10pt;
+  word-wrap: break-word;
+  width: 80%;
   color: var(--defaultLetterColor);
+  margin-top: 5px;
 }
