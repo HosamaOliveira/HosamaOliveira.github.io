@@ -2,38 +2,47 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+:root {
+  --letterColor: rgb(147, 105, 185);
+  --letterColor2: rgb(226, 176, 245);
+}
+
 #body {
   background: url(./imagens/fundo-min.jpg)no-repeat center/cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align: center;
 }
 
 header {
-  /* display: flex; */
-  width: 80%;
-  height: 80px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
   margin: auto;
-  margin-top: 20px;
 }
 
 h1 {
-  color: rgb(39, 2, 73);
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 1rem;
+  color: var(--letterColor);
+  background-color: rgba(158, 99, 214, 0.171);
   font-size: 24pt;
   font-family: 'Comfortaa', cursive;
   margin-top: 5px;
-  text-shadow: rgb(179, 156, 221) 1px 2px 2px;
+  text-shadow: rgb(0, 0, 0) 1px 2px 2px;
+  box-shadow: violet 0 1px 2px 1px;
 }
 
 #content {
-  width: 95%;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 950px;
 }
 
 a {
@@ -41,12 +50,10 @@ a {
 }
 
 .div {
-  width: 95%;
-  max-width: 450px;
-  background-image: linear-gradient(rgba(44, 30, 82, 0.842), rgba(93, 89, 131, 0.842));
-  border-radius: 1em;
+  width: 100%;
+  /* max-width: 450px; */
+  background-image: linear-gradient(rgba(44, 30, 82, 0.678), rgba(93, 89, 131, 0.678));
   margin: 25px auto 25px auto;
-  box-shadow: 0 0 10px 1px rgba(176, 138, 192, 0.548);
   cursor: pointer;
   outline: none;
   position: relative;
@@ -55,16 +62,16 @@ a {
 
 h3 {
   width: 80%;
-  color: rgb(158, 129, 207);
-  text-shadow: 1px 1px 1px rgb(107, 81, 119);
+  color: var(--letterColor);
+  text-shadow: black 0 1px 5px;
   font-size: 23pt;
   margin: auto;
   padding: 20px 0 0 0;
 }
 
 p {
-  color: rgb(158, 129, 207);
-  text-shadow: 0 0 10px rgb(0, 0, 0);
+  color: var(--letterColor2);
+  text-shadow: black 0 1px 5px;
   margin-top: 15px;
   padding: 20px 0 10px 0;
   font-size: 13pt;
@@ -76,7 +83,11 @@ footer {
 }
 
 #footer {
-  color: rgb(255, 255, 255);
+  color: var(--letterColor2);
   font-size: 8pt;
   font-family: 'Comfortaa', cursive;
+  background-color: rgba(158, 99, 214, 0.171);
+  padding: 5px;
+  border-radius: 1ex;
+  text-shadow: black 0 1px 5px;
 }
