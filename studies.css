@@ -23,14 +23,14 @@
 }
 
 :root {
-  --defaultLetterColor: rgb(90, 6, 107); 
+  --defaultLetterColor: rgb(69, 3, 82); 
   --textShadow: 0px 1px 1px black; 
-	--background-color: rgba(212, 154, 159, 0.603);
-	--box-shadow: 0 1px 5px .5px rgb(82, 2, 75);
+	--background-color: rgba(212, 154, 202, 0.425);
+	--box-shadow: 0 3px 5px .5px rgba(80, 51, 77, 0.822);
 }
 
 body {
-  background: url(./imagens/pexels-oleg-magni-2033997.jpg)no-repeat center/cover;
+  background: url(.//imagens/fundoEstudos.jpg)no-repeat center/cover;
 	display: flex;
 	flex-direction: column;
 	padding: 10px 0 10px 0;
@@ -54,7 +54,7 @@ h1 {
   color: var(--defaultLetterColor);
   text-shadow: var(--textShadow);
   margin-top: 15px;
-  padding: 5px;
+  padding: 5px 15px 5px 15px;
 	border-radius: 5px;
 	background-color:var(--background-color);
 	box-shadow: var(--box-shadow);
@@ -71,7 +71,7 @@ section {
 .link {
   background-color: var(--background-color);
   width: 100%;
-	max-width: 600px;
+	max-width: 500px;
   padding: 10px;
   place-items: center;
   margin-top: 40px;
@@ -128,3 +128,18 @@ p {
   border-bottom: 1px solid var(--defaultLetterColor);
   padding: 5px;
 }
+
+footer {
+  padding: 5px;
+	width: 100%;
+}
+
+#footer {
+  color: rgb(236, 199, 199);
+  font-size: 8pt;
+  font-family: 'Comfortaa', cursive;
+  padding: 5px;
+  border-radius: 1ex;
+  text-shadow: var(--textShadow);
+}
+
