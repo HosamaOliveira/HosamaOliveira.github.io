@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,700;1,400;1,700&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 ::-webkit-scrollbar {
   background: transparent;
@@ -17,29 +21,32 @@
   box-shadow: inset 0px 0px 5px #00000080;
 }
 
-::selection { /*texto selecionado pelo mouse*/
+::selection {
+  /*texto selecionado pelo mouse*/
   background: rgb(49, 16, 80);
   color: #ffffff;
 }
 
 :root {
-  --letterColor: rgb(147, 105, 185);
-  --letterColor2: rgb(226, 176, 245);
-	--boxShadow: violet 0 1px 5px .2px;
-	--textShadow: black 0 2px 5px;
+  --letterColor: rgb(29, 7, 49);
+  --letterColor2: rgb(46, 0, 65);
+  --boxShadow: rgb(63, 30, 77) 0 1px 5px .2px;
+  --textShadow: rgb(118, 54, 138) 0 2px 5px;
+  --background-color: rgba(176, 132, 206, 0.527);
 }
 
 body {
-	cursor: url(./imagens/cursor.png), default;
+  cursor: url(./imagens/cursor.png), default;
 }
 
 #body {
-  background: url(./imagens/fundo-min.jpg)no-repeat center/cover;
+  background: url(./imagens/sameera-ganegoda.jpg)no-repeat center/cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
-	padding: 10px;
+  padding: 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 header {
@@ -54,9 +61,9 @@ h1 {
   width: 100%;
   max-width: 500px;
   padding: 10px;
-  border-radius: 1rem;
+  border-radius: 5px;
   color: var(--letterColor);
-  background-color: rgba(158, 99, 214, 0.171);
+  background-color: var(--background-color);
   font-size: 24pt;
   font-family: 'Comfortaa', cursive;
   text-shadow: var(--textShadow);
@@ -69,7 +76,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: auto;
-	margin-top: 0px;
+  margin-top: 0px;
 }
 
 a {
@@ -79,20 +86,20 @@ a {
 
 .div {
   max-width: 400px;
-	height: 250px;
+  height: 250px;
   border-radius: 1ex;
-  background-image: linear-gradient(rgba(44, 30, 82, 0.678), rgba(93, 89, 131, 0.678));
+  background-color: var(--background-color);
   margin: 25px auto 25px auto;
   outline: none;
   position: relative;
   padding: 10px 0 10px 0;
-	box-shadow: var(--boxShadow);
-	cursor: url(./imagens/cursor2.png), default;
+  box-shadow: var(--boxShadow);
+  cursor: url(./imagens/cursor2.png), default;
 }
 
 h3 {
   width: 95%;
-	height: 150px;
+  height: 150px;
   color: var(--letterColor);
   text-shadow: var(--textShadow);
   font-size: 23pt;
@@ -110,7 +117,7 @@ p {
 
 footer {
   padding: 5px;
-	width: 100%;
+  width: 100%;
 }
 
 #footer {
