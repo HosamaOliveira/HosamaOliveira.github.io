@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,700;1,400;1,700&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 ::-webkit-scrollbar {
   background: transparent;
@@ -9,36 +13,41 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #612c7d4d;
+  background: var(--color1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #612c7d;
-  box-shadow: inset 0px 0px 5px #00000080;
+  background: var(--color);
+  /* box-shadow: inset 0px 0px 5px var(--color); */
 }
 
-::selection { /*texto selecionado pelo mouse*/
-  background: rgb(49, 16, 80);
-  color: #ffffff;
+::selection {
+  /*texto selecionado pelo mouse*/
+  background: var(--color);
+  color: var(--color1);
 }
 
 :root {
-  --defaultLetterColor: rgb(69, 3, 82); 
-  --textShadow: 0px 1px 1px black; 
-	--background-color: rgba(212, 154, 202, 0.425);
-	--box-shadow: 0 3px 5px .5px rgba(80, 51, 77, 0.822);
+  --color: rgb(0, 0, 0);
+  --color1: rgb(112, 108, 108);
+  --color2: rgb(255, 255, 255);
+  --color3: rgb(37, 33, 33);
+  --defaultLetterColor: rgb(69, 3, 82);
+  --textShadow: 0px 1px 1px black;
+  --background-color: rgba(212, 154, 202, 0.425);
+  --box-shadow: 0 3px 5px .5px rgba(80, 51, 77, 0.822);
 }
 
 body {
-  background: url(.//imagens/fundoEstudos.jpg)no-repeat center/cover;
-	display: flex;
-	flex-direction: column;
-	padding: 10px 0 10px 0;
-	min-height: 100vh;
+  background-color: var(--color);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+  min-height: 100vh;
   font-family: 'Comfortaa', cursive;
   -webkit-tap-highlight-color: transparent;
-	cursor: url(./imagens/cursor.png), default;
-	text-align: center;
+  cursor: url(./imagens/cursorMyProjects.png), default;
+  text-align: center;
 }
 
 main {
@@ -51,13 +60,11 @@ main {
 
 h1 {
   font-size: 28pt;
-  color: var(--defaultLetterColor);
-  text-shadow: var(--textShadow);
+  color: var(--color1);
+  text-shadow: var(--color2);
   margin-top: 15px;
   padding: 5px 15px 5px 15px;
-	border-radius: 5px;
-	background-color:var(--background-color);
-	box-shadow: var(--box-shadow);
+  border-radius: 5px;
 }
 
 section {
@@ -69,39 +76,48 @@ section {
 }
 
 .link {
-  background-color: var(--background-color);
+  background-image: linear-gradient(var(--color1), var(--color));
   width: 100%;
-	max-width: 500px;
+  max-width: 500px;
   padding: 10px;
   place-items: center;
   margin-top: 40px;
   text-align: center;
-	border-radius: 5px;
-  box-shadow: var(--box-shadow);
+  border-radius: 5px;
 }
 
 a {
   text-decoration: none;
-  color: var(--defaultLetterColor);
-	cursor: url(./imagens/cursor2.png), default;
+  color: var(--color1);
+  cursor: url(./imagens/cursor2MyProjects.png), default;
   padding: 3px;
 }
 
 h2 {
   font-style: oblique;
-  text-shadow: var(--textShadow);
   padding: 15px;
-  color: var(--defaultLetterColor);
-	box-shadow: var(--box-shadow);
-	border-radius: 5px;
+  box-shadow: var(--color) 0 5px 10px 1px;
+  border-radius: 5px;
+  color: var(--color);
+}
+
+h2:hover {
+  text-shadow: var(--color) 1px 1px 1px;
+  transition: all .3s ease-in-out 0s;
+  box-shadow: var(--color) 0 2px 5px 1px;
+}
+
+h2:not(:hover) {
+  transition: all .3s ease-in-out 0s;
+
 }
 
 h3 {
   padding: 5px;
-  color: var(--defaultLetterColor);
+  color: var(--color1);
   font-size: 10pt;
   margin-top: 30px;
-	text-shadow: var(--textShadow);
+  text-shadow: var(--color) 1px 1px 1px;
 }
 
 .courseLink {
@@ -111,13 +127,10 @@ h3 {
   justify-content: space-between;
   font-size: 8pt;
   word-wrap: break-word;
-  background-color: rgb(170, 126, 126);
+  background-color: var(--color);
   margin-top: 10px;
   padding: 1px;
-  color: var(--defaultLetterColor);
-  text-shadow: var(--textShadow);
-  box-shadow: var(--box-shadow);
-	background-color: var(--background-color);
+  color: var(--color1);
   border-radius: 5px;
   padding: 5px;
 }
@@ -125,21 +138,20 @@ h3 {
 p {
   margin: auto;
   width: 60%;
-  border-bottom: 1px solid var(--defaultLetterColor);
+  border-bottom: 1px solid var(--color1);
   padding: 5px;
 }
 
 footer {
   padding: 5px;
-	width: 100%;
+  width: 100%;
+  border-top: var(--color1) 1px dotted;
 }
 
 #footer {
-  color: rgb(236, 199, 199);
+  color: var(--color1);
   font-size: 8pt;
   font-family: 'Comfortaa', cursive;
   padding: 5px;
   border-radius: 1ex;
-  text-shadow: var(--textShadow);
 }
-

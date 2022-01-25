@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -13,26 +14,28 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #612c7d4d;
+  background: var(--color5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #612c7d;
+  background: var(--color5);
   box-shadow: inset 0px 0px 5px #00000080;
 }
 
 ::selection {
   /*texto selecionado pelo mouse*/
-  background: rgb(49, 16, 80);
-  color: #ffffff;
+  background: var(--background-color);
+  color: var(--letterColor3);
 }
 
 :root {
-  --letterColor: rgb(29, 7, 49);
-  --letterColor2: rgb(46, 0, 65);
-  --boxShadow: rgb(63, 30, 77) 0 1px 5px .2px;
-  --textShadow: rgb(118, 54, 138) 0 2px 5px;
-  --background-color: rgba(176, 132, 206, 0.527);
+  --color: rgb(0, 0, 0);
+  --color2: rgb(79, 54, 90);
+  --color3: rgb(150, 141, 141);
+  --color4: rgb(89, 58, 104);
+  --color5: rgb(48, 24, 61);
+  --boxShadow: rgb(47, 33, 54) 0 0 5px 1px;
+  --textShadow: rgb(149, 138, 153) 0 2px 5px;
 }
 
 body {
@@ -40,7 +43,7 @@ body {
 }
 
 #body {
-  background: url(./imagens/sameera-ganegoda.jpg)no-repeat center/cover;
+  background-color: var(--color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -62,12 +65,9 @@ h1 {
   max-width: 500px;
   padding: 10px;
   border-radius: 5px;
-  color: var(--letterColor);
-  background-color: var(--background-color);
+  color: var(--color2);
   font-size: 24pt;
   font-family: 'Comfortaa', cursive;
-  text-shadow: var(--textShadow);
-  box-shadow: var(--boxShadow);
 }
 
 #content {
@@ -85,31 +85,49 @@ a {
 }
 
 .div {
-  max-width: 400px;
+  width: 100%;
+  max-width: 600px;
   height: 250px;
   border-radius: 1ex;
-  background-color: var(--background-color);
+  background-image: linear-gradient(var(--color), var(--color2));
   margin: 25px auto 25px auto;
   outline: none;
   position: relative;
   padding: 10px 0 10px 0;
-  box-shadow: var(--boxShadow);
+
   cursor: url(./imagens/cursor2.png), default;
+}
+
+.div:hover {
+  transition: all .3s ease-in-out 0s;
+  transform: translateY(-6px);
+  letter-spacing: .5px;
+  border: var(--color5) 1px solid;
+}
+
+.div:not(:hover) {
+  transition: all .3s ease-in-out 0s;
 }
 
 h3 {
   width: 95%;
   height: 150px;
-  color: var(--letterColor);
-  text-shadow: var(--textShadow);
-  font-size: 23pt;
+  color: var(--color2);
+  text-shadow: var(--color) 0 3px 3px;
+  font-size: 25pt;
   margin: auto;
   padding: 20px 0 0 0;
 }
 
+.div:hover h3 {
+  text-shadow: none;
+  color: var(--color4);
+  text-shadow: var(--color) 0 3px 3px;
+}
+
 p {
-  color: var(--letterColor2);
-  text-shadow: var(--textShadow);
+  color: var(--color3);
+  text-shadow: var(--color5) 0 0 2px;
   margin-top: 5px;
   padding: 20px 0 10px 0;
   font-size: 13pt;
@@ -121,10 +139,9 @@ footer {
 }
 
 #footer {
-  color: var(--letterColor2);
+  color: var(--color3);
   font-size: 8pt;
   font-family: 'Comfortaa', cursive;
   padding: 5px;
   border-radius: 1ex;
-  text-shadow: var(--textShadow);
 }

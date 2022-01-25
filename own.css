@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,700;1,400;1,700&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 ::-webkit-scrollbar {
   background: transparent;
@@ -9,36 +14,38 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #612c7d4d;
+  background: var(--color1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #612c7d;
+  background: var(--color);
   box-shadow: inset 0px 0px 5px #00000080;
 }
 
-::selection { /*texto selecionado pelo mouse*/
-  background: rgb(49, 16, 80);
-  color: #ffffff;
+::selection {
+  /*texto selecionado pelo mouse*/
+  background: var(--color);
+  color: var(--color1);
 }
 
 :root {
-  --defaultLetterColor: rgb(174, 163, 177); 
-  --textShadow: 0px 1px 1px black; 
-	--background-color: rgba(0, 0, 0, 0.603);
-	--box-shadow: 0 5px 5px .5px rgb(0, 0, 0);
+  --color: rgb(0, 0, 0);
+  --color1: rgb(151, 146, 146);
+  --color2: rgba(0, 0, 0, 0.575);
+  --color3: rgb(255, 255, 255);
+
 }
 
 body {
   background: url(./imagens/fundoProprio.jpg)no-repeat center/cover;
-	display: flex;
-	flex-direction: column;
-	padding: 10px 0 10px 0;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 10px 0;
+  min-height: 100vh;
   font-family: 'Comfortaa', cursive;
   -webkit-tap-highlight-color: transparent;
-	cursor: url(./imagens/cursor.png), default;
-	text-align: center;
+  cursor: url(./imagens/cursorMyProjects.png), default;
+  text-align: center;
 }
 
 main {
@@ -50,13 +57,11 @@ main {
 }
 
 h1 {
-  font-size: 28pt;
-  color: var(--defaultLetterColor);
-  text-shadow: var(--textShadow);
-  padding: 10px 15px 10px 15px ;
-	border-radius: 15px;
-	background-color:var(--background-color);
-	box-shadow: var(--box-shadow);
+  font-size: 30pt;
+  color: var(--color1);
+  text-shadow: var(--color) 0 8px 1px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 15px;
 }
 
 section {
@@ -68,46 +73,60 @@ section {
 }
 
 .link {
-  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color2);
   width: 100%;
-	max-width: 400px;
+  max-width: 600px;
   padding: 20px;
   place-items: center;
   margin-top: 40px;
   text-align: center;
-	border-radius: 15px;
-  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  box-shadow: var(--color) 0 0 5px 1px;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
-	cursor: url(./imagens/cursor2.png), default;
+  cursor: url(./imagens/cursor2MyProjects.png), default;
 }
 
 h2 {
+  width: 100%;
   font-style: oblique;
-  text-shadow: var(--textShadow);
+  text-shadow: var(--color1) 0 1px 1px;
   padding: 0 15px 15px 15px;
-  color: var(--defaultLetterColor);
-	box-shadow: var(--box-shadow);
-	border-radius: 5px;
+  color: var(--color1);
+  border-bottom: var(--color) 2px solid;
+  border-radius: 5px;
+}
+
+h2:hover {
+  transition: all .3s ease-in-out 0s;
+  letter-spacing: .5px;
+  text-shadow: var(--color3) 0 1px 1px;
+  border-bottom: var(--color1) 1px solid;
+}
+
+h2:not(:hover) {
+  transition: all .3s ease-in-out 0s;
 }
 
 h3 {
   padding: 15px 5px 5px 5px;
-  color: var(--defaultLetterColor);
+  color: var(--color1);
   font-size: 10pt;
   margin-top: 30px;
-	text-shadow: var(--textShadow);
 }
 
 footer {
   padding: 5px;
-	width: 100%;
+  width: 100%;
 }
 
 #footer {
-  color: var(--defaultLetterColor);
+  color: var(--color1);
   font-size: 8pt;
   font-family: 'Comfortaa', cursive;
   padding: 5px;
