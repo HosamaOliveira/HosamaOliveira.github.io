@@ -3,48 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0 user-scalable=no">
   <meta name="author" content="Hosama Oliveira">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./imagens/icon5.png">
+  <meta name="description" content="Portfolio">
+  <meta name="theme-color" content="#a57e98">
   <title>Hosama Oliveira</title>
 </head>
 
 <body>
   
-  <main id="body">
+  <main>
 
-    <header>
-     <h1>Hosama's projects page</h1>
-    </header>
+    <div id="leftSide">
 
-    <section id="content">
+      <div class="capsule">
 
-      <a href="./own.html" target="_blank" class="div">
-        <div class="swing">
-          <h3>These are my personal projects</h3>
-          <p>Technologies used in this project:</p>
-          <img src="https://img.shields.io/badge/-HTML-43207c?style=flat&logo=HTML5" alt="html badge" class="badge" />
-					<img src="https://img.shields.io/badge/-CSS-43207c?style=flat&logo=CSS3&logoColor=1572B6" alt="css badge" class="badge" />
-					<img src="https://img.shields.io/badge/-JavaScript-43207c?style=flat&logo=javascript" alt="js badge" class="badge" />
+        <div id="personalPhoto" data-anime="down">
+          <img src="" alt="Foto pessoal" id="userImage">
         </div>
-      </a>
 
-      <a href="./studies.html" target="_blank" class="div">
-        <div class="swing">
-          <h3>These are exercises I did during my studies.</h3>
-          <p>Technologies used in this project:</p>
-          <img src="https://img.shields.io/badge/-HTML-43207c?style=flat&logo=HTML5" alt="html badge" class="badge" />
-					<img src="https://img.shields.io/badge/-CSS-43207c?style=flat&logo=CSS3&logoColor=1572B6" alt="css badge" class="badge" />
-					<img src="https://img.shields.io/badge/-JavaScript-43207c?style=flat&logo=javascript" alt="js badge" class="badge" />
+        <div id="personalInfo">
+          <h2 id="userName" class="revealBlock" ></h2>
+          <p id="userBio" class="revealBlock" data-anime="right"></p>
         </div>
-      </a>
 
-    </section>
-    
-    <footer>
-      <a id="footer" href='https://br.freepik.com/fotos-vetores-gratis/fundo'>Foto de fundo criada por kjpargeter - br.freepik.com</a>
-    </footer>
+        <div id="capsuleLocation" data-anime="left">
+          <p id="pin" >📌</p>
+          <p id="locat"></p>
+        </div>
+
+      </div>
+
+      <div class="capsule">
+        <div id="about">
+          <h4>Sobre</h4>
+          <p>Iniciei meus estudos em maio de 2021, acabei me apaixonando pela programação e cada dia que passa me sinto mais animada </p>
+        </div>
+
+      </div>
+
+      <div class="capsule" data-anime="left">
+
+        <h4>Social-Links</h4>
+
+        <div class="icons"  >
+
+          <span class="icon"><a href="https://www.linkedin.com/in/hosama-gonçalves-oliveira-9405a8229/" target="_blank"><img src="https://img.shields.io/badge/-Linkedin-000000?style=plastic&logo=Linkedin" alt="Ícone linkedin"></a></span>
+
+          <span class="icon"><a href="https://github.com/HosamaOliveira" target="_blank"><img src="https://img.shields.io/badge/-GitHub-000000?style=plastic&logo=GitHub" alt=""></a></span>
+
+          <span class="icon"><a href="mailto:hosama17@gmail.com" target="_blank"><img src="https://img.shields.io/badge/-Gmail-000000?style=plastic&logo=Gmail" alt="Ícone G-mail"></a></span>
+
+          <span class="icon"><a href="https://wa.me/5547988870279" target="_blank"><img src="https://img.shields.io/badge/-WhatsApp-000000?style=plastic&logo=WhatsApp" alt="Ícone whatsApp"></a></span>
+        </div>
+
+      </div>
+
+      <div class="capsule" data-anime="right">
+
+        <h4>Technologies</h4>
+
+        <div class="icons">
+          <div id="capsuleTecno">
+            
+            <div class="iconsColumn">
+
+              <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="">
+              <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="">
+              <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="">
+              <img src="https://img.shields.io/badge/-Vue.Js-000000?style=plastic&logo=Vue.Js" alt="">
+
+            </div>
+
+            <div class="iconsColumn">
+              
+              <img src="https://img.shields.io/badge/-Git-000000?style=plastic&logo=Git" alt="">
+              <img src="https://img.shields.io/badge/-GitHub-000000?style=plastic&logo=GitHub" alt=""> 
+              <img src="https://img.shields.io/badge/-VisualStudioCode-000000?style=plastic&logo=VisualStudioCode" alt="">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="capsule" data-anime="left">
+
+        <h4>Instituições de ensino</h4>
+
+        <div class="icons">
+
+            <img src="https://img.shields.io/badge/-CursoEmVídeo-000000?style=plastic&logo=CursoEmVídeo" alt="">
+            <img src="https://img.shields.io/badge/-RocketSeat-000000?style=plastic&logo=RocketSeat" alt="">
+            <img src="https://img.shields.io/badge/-GrassHopper-000000?style=plastic&logo=GrassHopper"  alt="">
+          </div>
+
+      </div>
+      
+    </div>
+
+    <div id="rightSide">
+      
+      <div class="capsuleTwo">
+        <h2 id="titleMyProjects" data-anime="up">My Projects</h2>
+        
+        <div id="projectCapsule">
+
+            <button data-anime="right">
+              <a href="https://hosamaoliveira.github.io/Desafio-Modal/" target="_blank"><h4>Modal</h4></a>
+              
+              <div class="description">
+                <p>Click "open window" to open the modal, click esc to close.</p>
+                <p>Technologies used in this project</p>
+              </div>
+
+              <div class="technoIcon">
+                <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="Badge Html5">
+                <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="Badge Css3">
+                <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+              </div>
+
+            </button>
+
+            <button data-anime="left">
+              <a href="https://hosamaoliveira.github.io/Rosa_de_Pedra/" target="_blank"><h4>Rosa de Pedra</h4></a>
+
+              <div class="description">
+                <p>A site that has step-by-step content of products made in crochet.</p>
+                <p>Technologies used in this project</p>
+              </div>  
+
+              <div class="technoIcon">
+                <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="Badge Html5">
+                <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="Badge Css3">
+                <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+              </div>
+
+            </button>
+
+            <button data-anime="right"> 
+              <a href="https://hosamaoliveira.github.io/Side-menu-component/" target="_blank"><h4>Side menu component</h4></a>
+
+              <div class="description">
+                <p>Side menu of the Rosa de Pedra website.</p>
+                <p>Technologies used in this project</p>
+              </div>
+
+              <div class="technoIcon">
+                <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+              </div>
+            </button>
+          
+            <button data-anime="left">
+              <a href="https://hosamaoliveira.github.io/WebComponent/" target="_blank"><h4>Web component</h4></a>
+
+              <div class="description">
+                <p>Notes system. A web component with pure javaScript</p>
+                <p>Technologies used in this project</p>
+              </div>
+
+              <div class="technoIcon">
+                <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+              </div>
+            </button>
+
+            <button data-anime="right">
+              <a href="https://hosamaoliveira.github.io/Cracha-NLW/" target="_blank"><h4>Personalized badge</h4></a>
+
+              <div class="description">
+                <p>DoWhile virtual badge, a static application with the objective of displaying user information brought from the GitHub API and inserting it into a layout with the face of the DoWhile 2021 event</p>
+                <p>Technologies used in this project</p>
+              </div>
+
+              <div class="technoIcon">
+                <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="Badge Html5">
+                <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="Badge Css3">
+                <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+              </div>
+            </button>
+          
+        </div>
+      </div>
+    </div>
+
   </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
