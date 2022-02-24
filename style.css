@@ -63,18 +63,17 @@ main {
   gap: 50px;
 }
 
-header {
+#background {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 20px;
   position: relative;
   height: 350px;
 }
 
-header:before {
+#background:before {
   content: "";
-  display: block;
+  display: flex;
   position: absolute;
   left: 0;
   top: 0;
@@ -82,7 +81,7 @@ header:before {
   height: 100%;
   z-index: 1;
   opacity: 0.6;
-  background: url(./imagens/Zama.jpg) no-repeat center/cover;
+  background: url(imagens/Zama.jpg)no-repeat center/cover;
   background-attachment: fixed;
   /* background-size: 100% 100%; */
 }
