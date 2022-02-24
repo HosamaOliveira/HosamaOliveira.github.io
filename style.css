@@ -63,7 +63,7 @@ main {
   gap: 50px;
 }
 
-#background {
+header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -72,7 +72,7 @@ main {
   height: 350px;
 }
 
-#background:before {
+header:before {
   content: "";
   display: block;
   position: absolute;
