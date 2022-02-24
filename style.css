@@ -82,7 +82,7 @@ main {
   height: 100%;
   z-index: 1;
   opacity: 0.6;
-  background: url(imagens/Zama.jpg) no-repeat center/cover;
+  background: url(./imagens/Zama.jpg) no-repeat center/cover;
   background-attachment: fixed;
   /* background-size: 100% 100%; */
 }
