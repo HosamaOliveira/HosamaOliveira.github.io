@@ -8,8 +8,8 @@ function getGitHubProfileInfos() {
   fetch(url)
   .then(response =>response.json())
   .then(data => {
-    userImage.src = data.avatar_url
     userName.textContent = data.name
+    userImage.src = data.avatar_url
     bioSideMenu.textContent = data.bio
     userBio.textContent = data.bio
     locationSideMenu.textContent = data.location
@@ -35,7 +35,7 @@ showAge.innerHTML = ` ${age} years`
 const item = document.querySelectorAll("[data-anime]")
 
 const animeScroll = () => {
-  const windowTop = window.pageYOffset + window.innerHeight * 0.01
+  const windowTop = window.pageYOffset + window.innerHeight * 0.70
 
   item.forEach((element) => {
     if (windowTop > element.offsetTop) {
@@ -61,3 +61,11 @@ window.addEventListener("scroll", () => {
 // 					alert('rolou mais que 150 pixels!')
 // 				}
 // 			})
+
+// Função para rolar a página ao topo
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0
+  })
+}
