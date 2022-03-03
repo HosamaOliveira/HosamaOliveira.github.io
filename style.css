@@ -32,21 +32,23 @@
 
 :root {
   --color: #000000;
-  --color1: #3d4d4d;
-  --color2: #6db3c9;
+  --color1: #13020b;
+  --color2: #d3b2bd;
   --color3: #ffffff;
   --colorTransparent: #ffffff94;
-  --color1Transparent: #80d6eb4b;
+  --color1Transparent: #ce9da86c;
 }
 
 body {
   cursor: url(./imagens/cursor2.png) 15 4, auto;
   min-height: 100vh;
+  color: var(--color1);
   display: grid;
   justify-content: space-between;
   gap: 20px;
   grid-template-areas: "header header""aside aside""main main""footer footer";
   grid-template-rows: 90vh 1fr;
+  background-color: var(--color1Transparent);
 }
 
 a {
@@ -71,8 +73,9 @@ header:before {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(./imagens/planoDeFundo2.jpg)no-repeat center/cover;
-  background-attachment: fixed;
+  background: url(./imagens/zama1.jpg)no-repeat top/cover fixed;
+  filter: drop-shadow(0 5px 10px var(--color));
+  opacity: .8;
 }
 
 #name {
@@ -88,8 +91,9 @@ header:before {
   margin-top: 15px;
   font-size: 2.7rem;
   font-weight: bolder;
-  color: var(--color);
-  text-shadow: var(--color2) 1px 1px 1px;
+  color: var(--color2);
+  text-shadow: var(--color) 1px 4px 1px;
+  transition: ease-in-out .5s;
 }
 
 aside {
@@ -132,11 +136,10 @@ li a {
   background-image: linear-gradient(var(--color2), var(--color1));
   box-shadow: var(--color) 1px 1px 2px 1px;
   padding: 2px;
-
+  transition: all .5s;
 }
 
-li a:hover,
-li a:focus {
+li a:hover {
   color: var(--color3);
   font-weight: bolder;
   box-shadow: none;
@@ -149,6 +152,11 @@ li a:focus {
 
 li a:active {
   color: var(--color2);
+}
+
+li::after {
+  content: "";
+  background-color: yellow;
 }
 
 #imageMenu {
@@ -164,7 +172,6 @@ li a:active {
   border: 1px solid var(--color2);
   pointer-events: none;
   -webkit-user-drag: none;
-
 }
 
 #bioMenu {
@@ -177,33 +184,29 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 20px;
   overflow-x: hidden;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .title2 {
   display: flex;
   width: 100%;
-  text-align: center;
-  justify-content: center;
+  font-size: 1.4rem;
+  padding: 40px 0 20px;
 }
 
-h2 {
-  font-size: 1.8rem;
-  width: 80%;
-  max-width: 300px;
-  color: var(--color);
-  border-radius: 5px;
-  text-shadow: var(--color1) 2px 1px 1px;
-  padding-top: 40px;
-  border-bottom: 2px solid var(--color);
+.title2 h2 {
+  color: var(--color2);
+  margin: auto;
+  text-shadow: var(--color) 0px 3px .1px;
 }
 
 .capsulePhotoAbout {
   text-align: center;
   align-items: center;
   padding: 0 5px 10px;
+  /* background-color: rgb(30, 138, 30); */
 }
 
 #userImage {
@@ -211,7 +214,7 @@ h2 {
   height: 150px;
   border-radius: 50%;
   border: var(--color) 1px solid;
-  margin-top: 50px;
+  margin-top: 10px;
   user-select: none;
   pointer-events: none;
   /* impedir de arrastar a foto */
@@ -257,31 +260,36 @@ h2 {
   text-align: center;
   justify-content: space-between;
   gap: 10px;
-  width: 95%;
-  min-height: 200px;
-  box-shadow: var(--color2) 0px 1px 2px .5px;
-  max-width: 400px;
-  padding: 10px;
-  border-radius: 1ex;
-  margin-top: 10px;
+  width: 100%;
+  box-shadow: #000000 1px 0 10px 1px;
+  padding-bottom: 5px;
+}
+
+.capsule a {
+  width: 100%;
 }
 
 h3 {
-  width: 250px;
-  font-size: 1.5rem;
-  padding: 0 10px 5px;
-  color: var(--color);
-  box-shadow: var(--color1) .5px .5px 1px .1px;
-  border-radius: .5ex;
-
+  width: 100%;
+  font-size: 1.7rem;
+  padding: 15px;
+  background-image: linear-gradient(to top, var(--color), var(--color2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+  font-weight: bolder;
 }
+
+
 
 .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  width: 100%;
+  width: 95%;
+  max-width: 300px;
   margin-top: 10px;
   font-weight: bold;
   font-size: 1.2rem;
@@ -308,16 +316,20 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
-  font-size: 1.2rem;
-  background-image: linear-gradient(var(--color), var(--color2));
+  font-size: 1.1rem;
+  /* background-image: linear-gradient(var(--color), var(--color2)); */
+  background-image: linear-gradient(var(--color), var(--color1));
   color: var(--color2);
   text-shadow: var(--color) 2px 2px 1px;
 }
 
 #moveUp {
+  display: none;
+  position: fixed;
+  bottom: 55px;
+  right: 0;
   width: 50px;
   height: 50px;
 }
@@ -328,8 +340,13 @@ footer {
 }
 
 footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
   padding: 2px;
+  margin-top: 10px;
 }
 
 /* ------------------Media---------------------*/
@@ -397,7 +414,8 @@ footer p {
     left: 0;
     height: 100vh;
     width: 20%;
-    background-color: var(--color);
+    background-image: linear-gradient(var(--color), var(--color1));
+    box-shadow: var(--color) 0px 0px 5px 1px;
   }
 
   #imageMenu {
@@ -412,7 +430,7 @@ footer p {
     text-align: center;
     font-weight: lighter;
     padding: 5px;
-    color: var(--color3);
+    color: var(--color2);
   }
 
   nav {
@@ -437,9 +455,12 @@ footer p {
     padding: 5px;
   }
 
-  h2 {
-    padding-top: 20px;
-    font-size: 2rem;
+  main {
+    margin-top: 50px;
+  }
+
+  .title2 {
+    padding: 10px 0 20px;
   }
 
   .capsulePhotoAbout {
@@ -508,9 +529,32 @@ footer p {
     margin: auto;
   }
 
+  #moveUp {
+    bottom: 5px;
+  }
+
   footer {
     margin-top: 40px;
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  #userName {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  #bioMenu {
+    font-size: 1.1rem;
   }
 }
 

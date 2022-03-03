@@ -35,6 +35,13 @@ showAge.innerHTML = ` ${age} years`
 const item = document.querySelectorAll("[data-anime]")
 
 const animeScroll = () => {
+  
+  if (window.scrollY > document.querySelector("header").offsetHeight) {
+    moveUp.style.display = "block"
+  }else {
+    moveUp.style.display = "none"
+  }
+
   const windowTop = window.pageYOffset + window.innerHeight * 0.70
 
   item.forEach((element) => {
@@ -69,3 +76,12 @@ function scrollToTop() {
     top: 0
   })
 }
+
+// Função para mostrar o botão para rolar ao topo
+
+var altura = window.innerHeight
+document.documentElement.clientHeight
+document.body.clientHeight;
+
+
+console.log(altura)
