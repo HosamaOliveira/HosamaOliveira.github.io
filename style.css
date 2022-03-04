@@ -7,7 +7,7 @@
   font-family: 'Caveat', cursive;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
-  cursor: url(./imagens/cursor2.png) 2 40, auto;
+  /* cursor: url(./imagens/cursor2.png) 2 40, auto; */
 }
 
 ::-webkit-scrollbar {
@@ -57,7 +57,7 @@ body {
 a {
   outline: none;
   text-decoration: none;
-  cursor: url(./imagens/cursor4.png) 15 4, auto;
+  /* cursor: url(./imagens/cursor4.png) 15 4, auto; */
 }
 
 header {
