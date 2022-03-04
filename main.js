@@ -37,7 +37,8 @@ const item = document.querySelectorAll("[data-anime]")
 const animeScroll = () => {
   
   if (window.scrollY > document.querySelector("header").offsetHeight) {
-    moveUp.style.display = "block"
+    moveUp.style.display = "flex"
+    moveUp.style.flexDirection = "column"
   }else {
     moveUp.style.display = "none"
   }
