@@ -1,3 +1,22 @@
+var header = document.querySelector("header")
+var onMouse = false
+
+document.addEventListener("mousemove", parallax)
+
+function parallax(e) {  
+  if(onMouse){
+    this.querySelectorAll(".layer").forEach(layer => {
+      const speed = layer.getAttribute("data-speed")
+
+      const x = (window.innerWidth - e.pageX * speed)/100
+      const y = (window.innerHeight - e.pageY * speed)/100
+      
+      layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+      layer.style.transition = "all .1s"
+    })
+  }
+}
+// ---------------------------------------------
 const githubInfo  = { 
   gitHub: 'hosamaoliveira'
 } 
@@ -60,16 +79,6 @@ window.addEventListener("scroll", () => {
   animeScroll()
 })
 
-// var lastScroll = 0
-
-
-// 			window.addEventListener('scroll', (e) => {
-// 				if (window.scrollY - lastScroll > 150) {
-// 					lastScroll = window.scrollY
-// 					alert('rolou mais que 150 pixels!')
-// 				}
-// 			})
-
 // Função para rolar a página ao topo
 
 function scrollToTop() {
@@ -86,3 +95,4 @@ document.body.clientHeight;
 
 
 console.log(altura)
+

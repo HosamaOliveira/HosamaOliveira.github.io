@@ -33,14 +33,15 @@
 
 :root {
   --color: #000000;
-  --color1: #130206;
-  --color2: #b95d79;
-  --color3: #dac7c3;
+  --color1: #130a02;
+  --color2: #c78733;
+  --color3: #dad4c3;
   --color4: #ffffff;
-  --color5: #636060;
-  --color6: #a7a4a4;
+  --color5: #3f3a38;
+  --color6: #a7a5a4;
+  --colorHeader: #FFF0B5;
   --colorTransparent: #ffffff94;
-  --color1Transparent: #ce9da86c;
+  --color1Transparent: #ceb19d6c;
 }
 
 body {
@@ -51,7 +52,6 @@ body {
   gap: 20px;
   grid-template-areas: "header header""aside aside""main main""footer footer";
   grid-template-rows: 90vh 1fr;
-  /* background-color: var(--color1Transparent); */
 }
 
 a {
@@ -62,35 +62,37 @@ a {
 
 header {
   grid-area: header;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   position: relative;
-}
-
-header:before {
-  content: "";
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background: url(./imagens/fundo2.png)no-repeat top/cover fixed;
-  filter: drop-shadow(0 5px 10px var(--color));
-  filter: contrast(90%)
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  background: url(./imagens/fundo.avif)no-repeat bottom/cover fixed;
+  filter: contrast(160%);
+}
+
+#parallax {
+  display: none;
 }
 
 #name {
   display: flex;
   justify-content: center;
-  height: 80px;
+  position: absolute;
+  left: 0;
+  width: 100%;
   padding: 0 10px;
-  background-color: var(--color1Transparent);
   backdrop-filter: blur(5px);
 }
 
 #userName {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   margin-top: 15px;
   font-size: 2.7rem;
   font-weight: bolder;
@@ -105,7 +107,6 @@ aside {
   top: 0;
   z-index: 1;
   user-select: none;
-  /* margin-top: 5px; */
 }
 
 ul {
@@ -137,7 +138,7 @@ li a {
   font-size: 1.1rem;
   color: var(--color);
   font-weight: bold;
-  background-image: linear-gradient(var(--color6), var(--color2));
+  background-image: linear-gradient(var(--color3), var(--color2));
   box-shadow: var(--color) 0 1px 2px 1px;
   padding: 2px;
   transition: all .5s;
@@ -211,7 +212,6 @@ main {
   text-align: center;
   align-items: center;
   padding: 0 5px 10px;
-  /* background-color: rgb(30, 138, 30); */
 }
 
 #userImage {
@@ -222,7 +222,6 @@ main {
   margin-top: 10px;
   user-select: none;
   pointer-events: none;
-  /* impedir de arrastar a foto */
   -webkit-user-drag: none;
 }
 
@@ -266,7 +265,6 @@ main {
   justify-content: space-between;
   gap: 10px;
   width: 100%;
-  box-shadow: #000000 1px 0 10px 1px;
   padding-bottom: 5px;
 }
 
@@ -322,8 +320,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  box-shadow: var(--color) 0 -1px 5px .5px;
-  background-image: linear-gradient(var(--color2), var(--color6));
+  background-image: linear-gradient(var(--color3), var(--color2));
 }
 
 #moveUp {
@@ -350,6 +347,7 @@ footer p {
   width: 100%;
   padding: 2px;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 /* ------------------Media-Width---------------------*/
@@ -399,8 +397,24 @@ footer p {
   body {
     grid-template-areas: "aside header""aside main""aside footer";
     grid-template-rows: 100vh 1fr;
-    grid-template-columns: 1fr 80%;
+    grid-template-columns: 1fr 75%;
     gap: 0;
+  }
+
+  header {
+    background: url(./imagens/fundo1.avif)no-repeat center/cover fixed;
+    filter: contrast(160%);
+  }
+
+  #parallax {
+    display: flex;
+  }
+
+  #parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
   #userName {
@@ -416,8 +430,8 @@ footer p {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 20%;
-    background-color: var(--color5);
+    width: 25%;
+    background-color: var(--color2);
     box-shadow: var(--color) 0px 0px 5px 1px;
   }
 
@@ -431,9 +445,10 @@ footer p {
     margin-top: 10px;
     width: 100%;
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
     padding: 5px;
     color: var(--color);
+    text-shadow: #000000 0 0 1px;
   }
 
   nav {
@@ -543,6 +558,11 @@ footer p {
 }
 
 @media (min-width: 1000px) {
+
+  body {
+    grid-template-columns: 1fr 78%;
+  }
+
   #userName {
     font-size: 4rem;
   }
@@ -558,6 +578,20 @@ footer p {
 
   #bioMenu {
     font-size: 1.1rem;
+  }
+
+  #sideMenuCapsule {
+    width: 22%;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    grid-template-columns: 1fr 80%;
+  }
+
+  #sideMenuCapsule {
+    width: 20%;
   }
 }
 
@@ -589,37 +623,6 @@ footer p {
   transform: translate3d(0, 0, 0);
 }
 
-
-/* .typingAnimation {
-  display: inline-block;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 0;
-  margin-top: 15px;
-  animation: write normal 5s both;
-}
-
-.revealBlock {
-  font-size: 22pt;
-  position: relative;
-  font-weight: bolder;
-  opacity: 0;
-  animation: appearText 0.0001s linear forwards;
-  animation-delay: .5s;
-}
-
-.revealBlock:after {
-  content: '';
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  background-color: rgb(179, 140, 167);
-  animation: revBlock 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-}
-
 @keyframes revBlock {
   0% {
     left: 0;
@@ -645,10 +648,37 @@ footer p {
   100% {
     opacity: 1;
   }
-} 
+}
 
 @keyframes write {
   100% {
     max-width: 100%;
   }
-} */
+}
+
+@keyframes playColor {
+  0% {
+    filter: saturate(211%);
+    transform: scale(1);
+  }
+
+  25% {
+    filter: saturate(45%) drop-shadow(10px -10px 20px #ffffff);
+    transform: scale(1.1);
+  }
+
+  50% {
+    filter: hue-rotate(270deg);
+    transform: scale(1);
+  }
+
+  75% {
+    filter: hue-rotate(200deg) drop-shadow(10px -30px 20px #ffffff);
+    transform: scale(1.1);
+  }
+
+  100% {
+    filter: hue-rotate(250deg);
+    transform: scale(1);
+  }
+}
