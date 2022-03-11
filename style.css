@@ -13,7 +13,7 @@
 ::-webkit-scrollbar {
   background: transparent;
   width: 8px;
-  height: 4px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -46,7 +46,7 @@
 
 body {
   min-height: 100vh;
-  color: var(--color1);
+  color: var(--color);
   display: grid;
   justify-content: space-between;
   gap: 20px;
@@ -197,15 +197,18 @@ main {
 
 .title2 {
   display: flex;
+  text-align: center;
   width: 100%;
   font-size: 1.4rem;
-  padding: 40px 0 20px;
+  padding: 50px 0 20px;
 }
 
 .title2 h2 {
-  color: var(--color2);
+  width: 100%;
+  font-weight: bolder;
+  color: #c78733;
+  text-shadow: #000000 0 3px 2px;
   margin: auto;
-  text-shadow: var(--color) 0px 3px .1px;
 }
 
 .capsulePhotoAbout {
@@ -249,7 +252,7 @@ main {
 
 #about {
   width: 98%;
-  max-width: 380px;
+  max-width: 370px;
   font-weight: bold;
   color: var(--color);
   font-size: 1.3rem;
@@ -258,50 +261,98 @@ main {
 }
 
 .capsule {
+  width: 100%;
+  height: 100%;
+  background: url(./imagens/fundo1.avif)no-repeat center/cover fixed;
+  filter: contrast(160%);
+}
+
+.carouselCapsule {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  pointer-events: none;
+}
+
+.capsuleCarousel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  gap: 10px;
-  width: 100%;
-  padding-bottom: 5px;
+  justify-content: center;
+  gap: 5px;
+  width: 90%;
+  max-width: 450px;
+  margin: 20px auto;
+  border-radius: 1ex;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.281);
+  letter-spacing: 1px;
+  box-shadow: inset #000000 0 0 2px 1px;
 }
 
-.capsule a {
-  width: 100%;
-}
-
-h3 {
-  width: 100%;
-  font-size: 1.7rem;
-  padding: 15px;
-  background-image: linear-gradient(to top, var(--color), var(--color2));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: black;
-  font-weight: bolder;
-}
-
-.description {
+#arrow {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  width: 100%;
+  /* background-color: yellow; */
+  position: absolute;
+  left: 0;
+}
+
+#arrow img {
+  width: 20px;
+  /* padding: 0 10px; */
+  /* background-color: firebrick; */
+  margin: 0 20px 0;
+}
+
+.capsuleCarousel h3 {
+  width: 100%;
+  padding: 2px 2px 5px;
+  margin: auto;
+  pointer-events: all;
+  border-radius: 1ex;
+  color: var(--color2);
+}
+
+.capsuleCarousel h3 a {
+  font-size: 1.9rem;
+  font-weight: bolder;
+  padding: 0 10px;
+  color: var(--color2);
+  text-shadow: #000000 0 2px 1px;
+}
+
+.carousel p {
   width: 95%;
-  max-width: 300px;
-  margin-top: 10px;
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  margin: 25px auto auto;
+}
+
+.carousel span {
   font-size: 1.2rem;
+  font-weight: bold;
+  margin: 35px auto auto;
 }
 
 .icons {
-  align-items: center;
   text-align: center;
   width: 95%;
   max-width: 400px;
   padding: 5px;
+  margin: auto;
 }
 
 .icons img {
@@ -328,8 +379,8 @@ footer {
   position: fixed;
   bottom: 55px;
   right: 0;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: y;
 }
 
@@ -415,6 +466,7 @@ footer p {
     top: 0;
     left: 0;
     width: 100%;
+    /* object-fit: cover; */
   }
 
   #userName {
@@ -478,6 +530,7 @@ footer p {
   }
 
   .title2 {
+    font-size: 2rem;
     padding: 10px 0 20px;
   }
 
@@ -499,6 +552,7 @@ footer p {
 
   #about {
     text-align: left;
+    font-size: 1.6rem;
   }
 
   #userBio {
@@ -509,15 +563,15 @@ footer p {
     display: none;
   }
 
-  #about {
-    font-size: 1.6rem;
+  .capsuleCarousel h3 a {
+    font-size: 2.3rem;
   }
 
-  h3 {
-    font-size: 1.7rem;
+  .carousel p {
+    font-size: 1.5rem;
   }
 
-  .description {
+  .carousel span {
     font-size: 1.4rem;
   }
 

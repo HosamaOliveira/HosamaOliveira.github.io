@@ -16,6 +16,7 @@ function parallax(e) {
     })
   }
 }
+
 // ---------------------------------------------
 const githubInfo  = { 
   gitHub: 'hosamaoliveira'
@@ -96,3 +97,13 @@ document.body.clientHeight;
 
 console.log(altura)
 
+// Função para rolar o carousel com o scroll do mouse
+
+// document.querySelector("#scrollWheel").addEventListener("wheel", event => {
+
+//   if(event.deltaY > 0) {
+//     event.target.scrollBy(300, 0)
+//   } else {
+//   event.target.scrollBy(-300, 0)
+//   } 
+// })
