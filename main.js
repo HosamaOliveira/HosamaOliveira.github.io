@@ -1,4 +1,3 @@
-var header = document.querySelector("header")
 var onMouse = false
 
 document.addEventListener("mousemove", parallax)
@@ -16,7 +15,6 @@ function parallax(e) {
     })
   }
 }
-
 // ---------------------------------------------
 const githubInfo  = { 
   gitHub: 'hosamaoliveira'
@@ -97,13 +95,33 @@ document.body.clientHeight;
 
 console.log(altura)
 
+// Função para travar a rolagem do body ao ativar a rolagem X do #capsule
+
+let bod = document.querySelector("body") 
+let capsule = document.querySelector("#capsule")
+let mouseIn = false
+
+capsule.addEventListener("mouseenter", lockScrollY)
+function lockScrollY() {
+  mouseIn = true
+}
+capsule.addEventListener("mouseleave", unlockScrollY )
+function unlockScrollY() {
+  mouseIn = false
+}
+
 // Função para rolar o carousel com o scroll do mouse
 
-// document.querySelector("#scrollWheel").addEventListener("wheel", event => {
+document.querySelector("#scrollWheel").addEventListener("wheel", event => {
+  var wi = capsule.offsetWidth
+  if(event.deltaY > 0) {
+    event.target.scrollBy(wi, 0)
+  } else {
+  event.target.scrollBy(-wi, 0)
+  } 
 
-//   if(event.deltaY > 0) {
-//     event.target.scrollBy(300, 0)
-//   } else {
-//   event.target.scrollBy(-300, 0)
-//   } 
-// })
+  if(mouseIn){
+    event.preventDefault()
+    // return false    // Caso o event.preventDefault não funfe, tentar esse
+  }
+})

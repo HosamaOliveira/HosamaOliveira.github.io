@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Hosama Oliveira">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./imagens/icon5.png">
+  <meta name="description" content="Olá, meu nome é Hosama e este é o meu portfólio. Aqui você encontra projetos feitos por mim, a fim de mostrar meu conhecimento como desenvolvedora front-end.">
+  <meta name="theme-color" content="#c78733">
+  <title>Hosama Oliveira</title>
+</head>
+
+<body>
+
+  <header onmouseenter="onMouse=true" onmouseleave="onMouse=false">
+    <div id="parallax">
+      <img src="./imagens/solT.png" alt="Sun" data-speed="1" class="layer">
+      <img src="./imagens/mercurioT.png" alt="Mercury" data-speed="8" class="layer">
+      <img src="./imagens/venusT.png" alt="Venus" data-speed="-4" class="layer">
+      <img src="./imagens/terraT.png" alt="Earth" data-speed="5" class="layer">
+      <img src="./imagens/marteT.png" alt="Mars" data-speed="2" class="layer">
+      <img src="./imagens/jupiterT.png" alt="Jupiter" data-speed="-3" class="layer">
+      <img src="./imagens/saturnoT.png" alt="Saturn" data-speed="-3" class="layer">
+      <img src="./imagens/uranoT.png" alt="Uranus" data-speed="5" class="layer">
+      <img src="./imagens/netunoT.png" alt="Neptune" data-speed="6" class="layer">
+    </div>
+
+    <div id="name">
+      <h1 id="userName" class="typingAnimation"></h1>
+    </div>
+  </header>
+
+  <aside>
+
+    <div id="sideMenuCapsule">
+
+      <div id="imageMenu">
+
+        <img src="./imagens/zama.avif" alt="Foto de Perfil">
+
+      </div>
+
+      <div id="bioMenu">
+        <p id="bioSideMenu"></p>
+        <p id="locationSideMenu"></p>
+      </div>     
+
+      <nav>
+        <ul>
+          <li><a href="#boxAbout"><span>About</span></a></li>
+          <li><a href="#boxProjects">Projects</a></li>
+          <li><a href="#boxContacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main>
+
+    <div class="title2" id="boxAbout">
+      <h2 data-anime="left">About</h2>
+    </div>
+
+    <div class="capsulePhotoAbout" data-anime="right">
+
+      <img src="" alt="Foto pessoal" id="userImage">
+
+      <p id="userBio" data-anime="left"></p>
+
+      <div id="capsuleLocation" data-anime="right">
+        <p id="pin" >📌</p>
+        <p id="locat"></p>
+      </div>
+
+      <p id="about">I am currently <span id="showAge"></span> old, I started my studies in May 2021, I ended up falling in love with programming and with each passing day I feel more excited to continue this journey. Get in touch with me at: </p>
+
+      <div class="icons" id="boxContacts">
+
+        <a href="mailto:hosama17@gmail.com" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-Gmail-000000?style=plastic&logo=Gmail" alt="Badge G-mail"><span class="linkIcon"></span></a>
+  
+        <a href="https://wa.me/5547988870279" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-WhatsApp-000000?style=plastic&logo=WhatsApp" alt="Badge WhatsApp"><span class="linkIcon"></span></a>
+
+        <a href="https://t.me/HosamaOliveira" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-Telegram-000000?style=plastic&logo=Telegram" alt="Badge Telegram"><span class="linkIcon"></span></a>
+  
+        <a href="https://www.messenger.com/t/zama.oliveira.16" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-Messenger-000000?style=plastic&logo=Messenger" alt="Badge Messenger"><span class="linkIcon"></span></a>
+      </div>
+    </div>   
+
+    <div class="title2" id="boxProjects">
+      <h2 data-anime="left">Projects</h2>
+    </div>
+
+    <div id="capsule">
+
+      <div class="carouselCapsule" id="scrollWheel">
+
+        <div class="carousel">
+          <div class="capsuleCarousel" data-anime="right">
+            <h3><a href="https://hosamaoliveira.github.io/Rosa_de_Pedra/" target="_blank" rel="noopener">Rosa de Pedra</a></h3>
+
+            <p>A site that has step-by-step content of products made in crochet.</p>
+            <span>Technologies used in this project</span>
+
+            <div class="icons">
+              <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="Badge Html5">
+              <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="Badge Css3">
+              <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" data-anime="up">
+          <div class="capsuleCarousel">
+            <h3><a href="https://hosamaoliveira.github.io/WebComponent/" target="_blank" rel="noopener">Web component</a></h3>
+
+            <p>Notes system. A web component with vanilla javaScript</p>
+            <span>Technologies used in this project</span>
+      
+            <div class="icons">
+              <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" data-anime="up">
+          <div class="capsuleCarousel">
+            <h3><a href="https://hosamaoliveira.github.io/Side-menu-component/" target="_blank" rel="noopener">Side menu component</a></h3>
+
+            <p>Side menu of the Rosa de Pedra website.</p>
+            <span>Technologies used in this project</span>
+    
+            <div class="icons">
+              <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" data-anime="up">
+          <div class="capsuleCarousel">
+
+            <h3><a href="https://hosamaoliveira.github.io/Cracha-NLW/" target="_blank" rel="noopener">Personalized badge</a></h3>
+
+            <p>DoWhile virtual badge, a static application with the objective of displaying user information brought from the GitHub API and inserting it into a layout with the face of the DoWhile 2021 event</p>
+            <span>Technologies used in this project</span>
+
+            <div class="icons">
+              <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="Badge Html5">
+              <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="Badge Css3">
+              <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel" data-anime="up">
+          <div class="capsuleCarousel">
+            <h3><a href="https://hosamaoliveira.github.io/Desafio-Modal/" target="_blank" rel="noopener">Modal</a></h3>
+
+            <p>Click "open window" to open the modal, click esc to close.</p>
+
+            <span>Technologies used in this project</span>
+
+            <div class="icons">
+              <img src="https://img.shields.io/badge/-Html5-000000?style=plastic&logo=Html5" alt="Badge Html5">
+              <img src="https://img.shields.io/badge/-Css3-000000?style=plastic&logo=Css3" alt="Badge Css3">
+              <img src="https://img.shields.io/badge/-JavaScript-000000?style=plastic&logo=JavaScript" alt="Badge JavaScript">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="moveUp"><img src="./imagens/seta.png" alt="" onclick="scrollToTop()"></div>
+  </main>
+  
+  <footer> 
+    <div class="itens">
+      <a href="https://github.com/HosamaOliveira" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-GitHub-000000?style=plastic&logo=GitHub" alt="Badge GitHub"><span class="linkIcon"></span></a>
+
+      <a href="https://www.linkedin.com/in/hosama-gonçalves-oliveira-9405a8229/" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-Linkedin-000000?style=plastic&logo=Linkedin" alt="Badge Linkedin"><span class="linkIcon"></span></a>
+
+      <a href="https://www.facebook.com/zama.oliveira.16" target="_blank" class="icon" rel="noopener"><img src="https://img.shields.io/badge/-Facebook-000000?style=plastic&logo=Facebook" alt="Badge Facebook"><span class="linkIcon"></span></a>
+    </div>   
+    <p id="copyright"> Copyright &copy; 2022 - by Hosama Oliveira</p><br/>
+  </footer>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
