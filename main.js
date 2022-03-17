@@ -45,7 +45,7 @@ let data = new Date()
 let fullDate  = new Date(data.getTime() - yearOfBirth.getTime())
 let age = fullDate.getFullYear()-1970 
 
-showAge.innerHTML = ` ${age} years`
+showAge.innerHTML = ` ${age}`
 
 
 // Animar todos os itens na tela que tem o atributo data-anime
