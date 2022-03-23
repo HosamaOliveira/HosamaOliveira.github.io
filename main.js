@@ -28,10 +28,6 @@ function getGitHubProfileInfos() {
   .then(data => {
     userName.textContent = data.name
     userImage.src = data.avatar_url
-    bioSideMenu.textContent = data.bio
-    userBio.textContent = data.bio
-    locationSideMenu.textContent = data.location
-    locat.textContent = data.location
   })
 }
 
